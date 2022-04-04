@@ -7,10 +7,10 @@ import github from '../Images/GitHub Icon.png'
 export default function Footer() {
     return(
         <footer>
-            <img className='media-image' src={facebook} alt='facebook link'/>
-            <img className='media-image' src={twitter} alt='twitter link'/>
-            <img className='media-image' src={instagram} alt='instagram link'/>
-            <img className='media-image' src={github} alt='github link'/>
+            <a href="#"><img className='media-image' src={facebook} alt='facebook link'/></a>
+            <a href="#"><img className='media-image' src={twitter} alt='twitter link'/></a>
+            <a href="#"><img className='media-image' src={instagram} alt='instagram link'/></a>
+            <a href="#"><img className='media-image' src={github} alt='github link'/></a>
         </footer>
     )
 }
