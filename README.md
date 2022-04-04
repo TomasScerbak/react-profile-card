@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/TomasScerbak/first-react-static-page.git]
-- Live Site URL: [https://tomasscerbak.github.io/first-react-static-page/]
+- Solution URL: [https://github.com/TomasScerbak/react-profile-card.git]
+- Live Site URL: [https://tomasscerbak.github.io/react-profile-card/]
 
 ## My process
 
@@ -36,42 +36,47 @@ Users should be able to:
 
 ### What I learned
 
-Since this is my first REACT project I've learned how to start react app via npm to setup all the files, import react and react-dom. I also learned how to create reusable components and connect them together using import export. Also what are the main benefits of using REACT as library.
+Learned how to import images and embedd them into code. Trained to separate components in separate JS files.
 
 
 ```js
 
 import React from 'react'
-import ReactDOM from 'react-dom'
-import "./styles.css"
-import App from '../src/app'
+import Header from '../src/Components/Header'
+import Main from '../src/Components/Main'
+import Footer from '../src/Components/Footer'
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-)
+export default function App() {
+    return(
+        <div className='container'>
+            <Header />
+            <Main />
+            <Footer />
+        </div>
+    )
+}
 
 import React from 'react'
+import twitter from '../Images/Twitter Icon.png'
+import facebook from '../Images/Facebook Icon.png'
+import instagram from '../Images/Instagram Icon.png'
+import github from '../Images/GitHub Icon.png'
 
-export default function Main() {
-    return (
-        <div className='main'>
-            <h1 className='main__heading'>Fun facts about React</h1>
-            <ul>
-                <li>Was first released in 2013</li>
-                <li>Was originally created by Jordan Walke</li>
-                <li>Has well over 100k stars on GitHub</li>
-                <li>Is maintained by Facebook</li>
-                <li>Powers thousands of enterprise apps, including mobile apps</li>
-            </ul>
-        </div>
+export default function Footer() {
+    return(
+        <footer>
+            <a href="#"><img className='media-image' src={facebook} alt='facebook link'/></a>
+            <a href="#"><img className='media-image' src={twitter} alt='twitter link'/></a>
+            <a href="#"><img className='media-image' src={instagram} alt='instagram link'/></a>
+            <a href="#"><img className='media-image' src={github} alt='github link'/></a>
+        </footer>
     )
 }
 ```
 
 ### Continued development
 
-I will continue to RECT and build REACT projects for further developement.
+I will continue to use REACT and build REACT projects for further developement.
 
 
 ## Author
